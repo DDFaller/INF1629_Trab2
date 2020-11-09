@@ -26,7 +26,7 @@ SECRET_KEY = 'atjzrj#e98iui1%l3u1(^qqnc)a(6&gfyl=0-(#m(p6umu_u8x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rocky-taiga-05060','127.0.0.1']
+ALLOWED_HOSTS = ['https://obscure-cliffs-26315.herokuapp.com/ ','127.0.0.1']
 
 
 # Application definition
