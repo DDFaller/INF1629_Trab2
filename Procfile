@@ -1,3 +1,3 @@
-web: python manage.py run_gunicorn
+web: python manage.py runserver
 python manage.py collectstatic --noinput
 manage.py migrate
