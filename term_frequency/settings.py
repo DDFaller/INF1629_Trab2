@@ -26,7 +26,7 @@ SECRET_KEY = 'atjzrj#e98iui1%l3u1(^qqnc)a(6&gfyl=0-(#m(p6umu_u8x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://stormy-everglades-18109.herokuapp.com/ ','127.0.0.1']
+ALLOWED_HOSTS = ['https://evening-fortress-74493.herokuapp.com/ ','127.0.0.1','.herokuapp.com']
 
 
 # Application definition
