@@ -1,1 +1,1 @@
-web: gunicorn initial_app.wsgi
+web: gunicorn term_frequency.term_frequency.wsgi
