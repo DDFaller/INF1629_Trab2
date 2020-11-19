@@ -1,5 +1,3 @@
-{% extends 'base.html' %}
-
 {% block content %}
 <h2>Upload</h2>
 
@@ -7,7 +5,13 @@
 <div id="FileUpload">
   <div class="wrapper">
     <div class="upload">
-      <p>Drag files here or <span class="upload__button">Browse</span></p>
+      <form method='post' enctype="multipart/form-data">
+      <p>Drag files here or
+        <input type="file" name="document">
+        <button type="submit" class="upload__button">Upload file</button>
+      </p>
+
+      </form>
     </div>
     <div class="uploaded uploaded--one">
       <i class="far fa-file-pdf"></i>
@@ -21,35 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="uploaded uploaded--two">
-      <i class="far fa-file-pdf"></i>
-      <div class="file">
-        <div class="file__name">
-          <p>dolor_sit.pdf</p>
-          <i class="fas fa-times"></i>
-        </div>
-        <div class="progress">
-          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:80%"></div>
-        </div>
-      </div>
-    </div>
-    <div class="uploaded uploaded--three">
-      <i class="far fa-file-pdf"></i>
-      <div class="file">
-        <div class="file__name">
-          <p>amet_consectetur.pdf</p>
-          <i class="fas fa-times"></i>
-        </div>
-        <div class="progress">
-          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:60%"></div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
-<form method='post' enctype="multipart/form-data">
 
-  <input type="file" name="document">
-  <button type="submit">Upload file</button>
-</form>
 {% endblock %}
