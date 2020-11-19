@@ -20,7 +20,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('app/', include("firstapp.urls")),
-    path('upload',views.upload, name='upload'),
     path('admin/', admin.site.urls),
 ]
 
