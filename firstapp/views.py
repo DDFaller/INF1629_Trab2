@@ -7,4 +7,3 @@ def index(request):
 
 def upload(request):
     return render(request,'upload.html')
-# Create your views here.
