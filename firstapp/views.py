@@ -6,4 +6,4 @@ def index(request):
     return HttpResponse("Hello, World!")
 
 def upload(request):
-    return render(request,'main/upload.html')
+    return render(request,'firstapp/upload.html')
