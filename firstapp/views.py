@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 
 def index(request):
-    return HttpResponse("Hello, World!")
+    return render(request,"base.html")
 
 def upload(request):
-    return render(request,'firstapp/upload.html')
+    return render(request,'upload.html')
