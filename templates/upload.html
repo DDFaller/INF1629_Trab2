@@ -2,6 +2,51 @@
 
 {% block content %}
 <h2>Upload</h2>
+
+
+<div id="FileUpload">
+  <div class="wrapper">
+    <div class="upload">
+      <p>Drag files here or <span class="upload__button">Browse</span></p>
+    </div>
+    <div class="uploaded uploaded--one">
+      <i class="far fa-file-pdf"></i>
+      <div class="file">
+        <div class="file__name">
+          <p>lorem_ipsum.pdf</p>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:100%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="uploaded uploaded--two">
+      <i class="far fa-file-pdf"></i>
+      <div class="file">
+        <div class="file__name">
+          <p>dolor_sit.pdf</p>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:80%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="uploaded uploaded--three">
+      <i class="far fa-file-pdf"></i>
+      <div class="file">
+        <div class="file__name">
+          <p>amet_consectetur.pdf</p>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:60%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <form method='post' enctype="multipart/form-data">
 
   <input type="file" name="document">
