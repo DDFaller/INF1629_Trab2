@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from . import forms
-from functions import handle_uploaded_file
+from . import functions
 
 def index(request):
 
@@ -13,7 +13,7 @@ def formSubmission(request):
     if request.method == "POST":
         form = forms.FileFieldForm(request.POST,request.FILES)
         if form.is_valid():
-            handle_uploaded_file(request.FILES['file'])
+            functions.handle_uploaded_file(request.FILES['file'])
             return HttpResponse("File uploaded sucessfully")
         else:
             form = forms.FileFieldForm()
