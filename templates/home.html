@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -7,7 +6,6 @@
   </head>
   <body>
     <form method="POST" enctype="multipart/form-data">
-      {% crsf_token %}
       {{form.as_p}}
       <button type="submit">Save</button>
     </form>
