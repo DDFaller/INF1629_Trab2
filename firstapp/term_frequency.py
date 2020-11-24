@@ -12,11 +12,11 @@ def touchopen(filename, *args, **kwargs):
 
 class term_frequency():
     def __init__(self,stopwords_file,content_file):
-        self.stopwords_file = open(stopwords_file, 'r')#'../stop_words.txt'
+        self.stopwords_file = stopwords_file.open()#'../stop_words.txt'
         self.stopwords = [self.stopwords_file.read(1024).split(',')]
         self.stopwords_file.close()
         self.word_freqs = touchopen('word_freqs', 'rb+')
-        self.data_file = open(content_file,'rb+')
+        self.data_file = content_file.open()
 
 
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
@@ -114,7 +114,3 @@ class term_frequency():
             #    print(tf[0], '-', tf[1])
         self.word_freqs.close()
         return top_frequencies
-
-frequency_counter = term_frequency('../stop_words.txt',sys.argv[1])
-frequency_counter.generate_frequency_file()
-frequency_counter.show_top25()
