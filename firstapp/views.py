@@ -44,12 +44,8 @@ class term_frequency_calculator():
         line = []
         word = ""
 
-
-        while True:
-            line = [self.data_file.readline()]
-            print(line)
-            if line == ['']: # Verificação de fim do arquivo
-                break
+        file = self.data_file.read().split("\n")
+        for line in file:
 
             line_split = line.split(" ")
             for wor in line_split:
