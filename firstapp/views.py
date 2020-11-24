@@ -21,7 +21,6 @@ def upload(request):
                 worddict[word] += 1
         else:
             worddict[word] = 1
-            worddict = sorted(worddict.items(), key = operator.itemgetter(1),reverse=True)
             context['worddict'] = worddict
         return render(request, 'uploadedView.html',context)
     return render(request,'upload.html')
