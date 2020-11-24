@@ -42,8 +42,6 @@ class term_frequency_calculator():
     #Palavras compostas ou que possuam caracteres especiais serão divididas e armazenadas separadamente.
     def generate_frequency_file(self):
         line = []
-        word_start = 0
-        word_index = 0
         word = ""
 
 
@@ -52,29 +50,15 @@ class term_frequency_calculator():
             print(line)
             if line == ['']: # Verificação de fim do arquivo
                 break
-            if line[0][len(line[0])-1] != '\n':
-                line[0] = line[0] + '\n'
-            word_start = None
-            word_index = 0
 
-            #Iterar cada caracter na linha
-            for c in line[0]:
-                if word_start == None:
-                    if c.isalnum():
-                        #Ínicio de palavra
-                        word_start = word_index
-                #Conhecemos a palavra
-                else:
-                    if not c.isalnum():
-                        word = line[0][word_start:word_index].lower()
-                        if len(word) >= 2 and word not in self.stopwords:
-                            # Checa se palavra já foi guardada
-                            if word in self.word_freqs.keys():
-                                self.word_freqs[word] += 1
-                            else:
-                                self.word_freqs[word] = 1
-                        word_start = None
-                word_index += 1
+            line_split = line.split(" ")
+            for wor in line_split:
+                if len(word) >= 2 and word not in self.stopwords:
+                    # Checa se palavra já foi guardada
+                    if word in self.word_freqs.keys():
+                        self.word_freqs[word] += 1
+                    else:
+                        self.word_freqs[word] = 1
 
 
 
