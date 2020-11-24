@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 from . import forms
 from . import functions
-from . import term_frequency_calculator
+from . import term_frequency
 
 def index(request):
 
