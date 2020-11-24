@@ -3,7 +3,8 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 from . import forms
 from . import functions
-from term_frequency import *
+from . import term_frequency
+from . import touchopen
 
 def index(request):
 
