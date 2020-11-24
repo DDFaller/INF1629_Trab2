@@ -12,6 +12,8 @@ def upload(request):
     if request.method == 'POST':
         #if 'document' in request.FILES:
         uploaded_file = request.FILES['document']
+        print(uploaded_file.name)
+        print(uploaded_file.size)
         return render(request, 'uploadedView.html')
     return render(request,'upload.html')
 
