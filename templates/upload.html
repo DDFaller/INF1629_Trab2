@@ -5,7 +5,7 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/fileUpload.js' %}"></script>
 <div id="container">
-      <form class="" method="post">
+      <form class="" method="post" enctype="multipart/form-data">
 
       {% csrf_token %}
       <input id="document" type="file" name="document"/>
