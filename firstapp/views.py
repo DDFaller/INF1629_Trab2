@@ -17,7 +17,7 @@ def upload(request):
         worddict = {}
         for word in wordlist:
             if word in worddict:
-            worddict[word] += 1
+                worddict[word] += 1
         else:
             worddict[word] = 1
             worddict = sorted(worddict.items(), key = operator.itemgetter(1),reverse=True)
