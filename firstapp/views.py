@@ -49,6 +49,7 @@ class term_frequency_calculator():
 
         while True:
             line = [self.data_file.readline()]
+            print(line)
             if line == ['']: # Verificação de fim do arquivo
                 break
             if line[0][len(line[0])-1] != '\n':
