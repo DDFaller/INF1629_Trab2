@@ -8,6 +8,10 @@ def index(request):
 
     return render(request,"base.html")
 
+def upload(request):
+    return render(request,'upload.html')
+
+
 def formSubmission(request):
     form = forms.FileFieldForm()
     if request.method == "POST":
