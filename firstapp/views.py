@@ -29,20 +29,9 @@ def upload(request):
 
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
-        self.stopwords_file = stopwords_file.open()#'../stop_words.txt'
-        self.stopwords = [self.stopwords_file.read(1024).split(',')]
-        self.stopwords_file.close()
-        self.word_freqs = self.touchopen('word_freqs', 'rb+')
+        self.stopwords = stopwords_file.open()#'../stop_words.txt'
+        self.word_freqs = {}
         self.data_file = content_file.open()
-
-
-    def touchopen(filename, *args, **kwargs):
-        try:
-            os.remove(filename)
-        except OSError:
-            pass
-        open(filename, "a").close() # "touch" file
-        return open(filename, *args, **kwargs)
 
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
     #num segundo arquivo.
@@ -55,10 +44,7 @@ class term_frequency_calculator():
         line = []
         word_start = 0
         word_index = 0
-        is_found = False
         word = ""
-        stored_word = ""
-        frequency = 0
 
 
         while True:
@@ -79,31 +65,15 @@ class term_frequency_calculator():
                 #Conhecemos a palavra
                 else:
                     if not c.isalnum():
-                        is_found = False
                         word = line[0][word_start:word_index].lower()
                         if len(word) >= 2 and word not in self.stopwords:
                             # Checa se palavra já foi guardada
-                            while True:
-                                stored_word = str(self.word_freqs.readline().strip(), 'utf-8')
-                                if stored_word == '':
-                                    break;
-                                frequency = int(stored_word.split(',')[1])
-                                stored_word = stored_word.split(',')[0].strip()
-                                if word == stored_word:
-                                    frequency += 1
-                                    is_found = True
-                                    break
-                            if not is_found:
-                                self.word_freqs.seek(0, 1)
-                                self.word_freqs.write(bytes("%20s,%04d\n" % (word, 1), 'utf-8'))
+                            if word in self.word_freqs.keys():
+                                self.word_freqs[word] += 1
                             else:
-                                self.word_freqs.seek(-26, 1)
-                                self.word_freqs.write(bytes("%20s,%04d\n" % (word, frequency), 'utf-8'))
-                            self.word_freqs.seek(0,0)
+                                self.word_freqs[word] = 1
                         word_start = None
                 word_index += 1
-        self.data_file.close()
-        self.word_freqs.flush()
 
 
 
@@ -113,29 +83,14 @@ class term_frequency_calculator():
     #correspondem as top 25 palavras com maior frequência.
     #Duas palavras com a mesma frequência irão aparecer de acordo com sua ocorrência no arquivo.
     def show_top25(self):
-        top_frequencies = []
-        current_word = ""
-        frequency = 0
+        top_frequencies = {}
+        sort_orders = sorted(self.word_freqs.items(), key=lambda x: x[1], reverse=True)
 
-        while True:
-            line = str(self.word_freqs.readline().strip(), 'utf-8')
-            if line == '': # EOF
+        count = 0
+        for k,v in sort_orders.items():
+            if count == 25:
                 break
-            frequency = int(line.split(',')[1]) #Obtem frequencia
-            current_word = line.split(',')[0].strip() #Obtem palavra
+            top_frequencies[k] = v
+            count += 1
 
-            # Checa se palavra já foi classificada
-            for index in range(25):
-                if index > len(top_frequencies) - 1:
-                    top_frequencies.append([current_word, frequency])
-                    break
-                if top_frequencies[index] == [] or top_frequencies[index][1] < frequency:
-                    top_frequencies.insert(index, [current_word, frequency])
-                    frequency = 0
-                    break
-
-        #for tf in top_frequencies:
-            #if len(tf) == 2:
-            #    print(tf[0], '-', tf[1])
-        self.word_freqs.close()
         return top_frequencies
