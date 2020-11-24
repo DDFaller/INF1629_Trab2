@@ -2,22 +2,24 @@
 import sys, os, string
 
 # Utility for handling the intermediate 'secondary memory'
-def touchopen(filename, *args, **kwargs):
-    try:
-        os.remove(filename)
-    except OSError:
-        pass
-    open(filename, "a").close() # "touch" file
-    return open(filename, *args, **kwargs)
+
 
 class term_frequency():
     def __init__(self,stopwords_file,content_file):
         self.stopwords_file = stopwords_file.open()#'../stop_words.txt'
         self.stopwords = [self.stopwords_file.read(1024).split(',')]
         self.stopwords_file.close()
-        self.word_freqs = touchopen('word_freqs', 'rb+')
+        self.word_freqs = self.touchopen('word_freqs', 'rb+')
         self.data_file = content_file.open()
 
+
+    def touchopen(filename, *args, **kwargs):
+        try:
+            os.remove(filename)
+        except OSError:
+            pass
+        open(filename, "a").close() # "touch" file
+        return open(filename, *args, **kwargs)
 
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
     #num segundo arquivo.
