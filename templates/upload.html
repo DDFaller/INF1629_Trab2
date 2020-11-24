@@ -26,6 +26,7 @@
 </g>
 </svg>
       <input type="file" name="files[]" id="file" class="box-file" data-multiple-caption="{count} files selected" multiple="">
+      <input type="hidden" id="csrf_token" value='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
       <label for="file"><strong>Choose a file</strong><span class="box-dragndrop"> or drag it here</span>.</label>
       <button type="submit" class="button">Upload</button>
     </div>
