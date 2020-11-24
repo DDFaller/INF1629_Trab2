@@ -11,10 +11,18 @@ def index(request):
 def upload(request):
     if request.method == 'POST':
         #if 'document' in request.FILES:
+        context = {}
         uploaded_file = request.FILES['document']
-        print(uploaded_file.name)
-        print(uploaded_file.size)
-        return render(request, 'uploadedView.html')
+        wordlist = fulltext.split()
+           worddict = {}
+           for word in wordlist:
+               if word in worddict:
+                   worddict[word] += 1
+               else:
+                   worddict[word] = 1
+                   worddict = sorted(worddict.items(), key = operator.itemgetter(1),reverse=True)
+        context['worddict'] = worddict
+        return render(request, 'uploadedView.html',context)
     return render(request,'upload.html')
 
 
