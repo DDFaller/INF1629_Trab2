@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 from . import forms
 from . import functions
+from . import term_frequency
 
 def index(request):
 
@@ -12,16 +13,12 @@ def upload(request):
     if request.method == 'POST':
         #if 'document' in request.FILES:
         context = {}
-        uploadedfile = request.FILES['document'].open()
-        fulltext = uploadedfile.read()
-        wordlist = fulltext.split()
-        worddict = {}
-        for word in wordlist:
-            if word in worddict:
-                worddict[word] += 1
-        else:
-            worddict[word] = 1
-            context['worddict'] = worddict
+        uploadedFile = request.FILES['document']
+        stopwordsFile = request.FILES['stopwords']
+        termFrequency = term_frequency(uploadedFile,stopwordsFile)
+        termFrequency.generate_frequency_file()
+        frequenciesList = termFrequency.show_top25()
+        context['worddict'] = frequenciesList
         return render(request, 'uploadedView.html',context)
     return render(request,'upload.html')
 
