@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 from . import forms
 from . import functions
-from . import term_frequency
+from . import term_frequency_calculator
 
 def index(request):
 
@@ -15,7 +15,7 @@ def upload(request):
         context = {}
         uploadedFile = request.FILES['document']
         stopwordsFile = request.FILES['stopwords']
-        termFrequency = term_frequency(uploadedFile,stopwordsFile)
+        termFrequency = term_frequency_calculator(uploadedFile,stopwordsFile)
         termFrequency.generate_frequency_file()
         frequenciesList = termFrequency.show_top25()
         context['worddict'] = frequenciesList

@@ -4,7 +4,7 @@ import sys, os, string
 # Utility for handling the intermediate 'secondary memory'
 
 
-class term_frequency():
+class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
         self.stopwords_file = stopwords_file.open()#'../stop_words.txt'
         self.stopwords = [self.stopwords_file.read(1024).split(',')]
