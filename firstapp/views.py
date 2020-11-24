@@ -88,8 +88,6 @@ class term_frequency_calculator():
 
         count = 0
         for k,v in sort_orders.items():
-            if count == 25:
-                break
             top_frequencies[k] = v
             count += 1
 
