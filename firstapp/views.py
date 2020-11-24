@@ -29,10 +29,11 @@ def upload(request):
 
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
-        self.stopwords = stopwords_file.open('r')#'../stop_words.txt'
+        self.stopwords = stopwords_file.open('r')
+        self.stopwords = self.stopwords.decode("utf-8") #'../stop_words.txt'
         self.word_freqs = {}
         self.data_file = content_file.open('r')
-
+        self.data_file = self.data_file.decode("utf-8")
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
     #num segundo arquivo.
     #PRE: data_file possui conteudo a ser contabilizado(Verificação: existe uma assertiva garantindo isto)
@@ -44,7 +45,7 @@ class term_frequency_calculator():
         line = []
         word = ""
 
-        file = self.data_file.read().split("\n")
+        file = self.data_file.read().decode("utf-8").split("\n")
         for line in file:
 
             line_split = line.split(" ")
