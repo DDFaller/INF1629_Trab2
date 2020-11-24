@@ -5,7 +5,8 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/fileUpload.js' %}"></script>
 <div id="container">
-  <form method="post" enctype="multipart/form-data" novalidate="" class="box has-advanced-upload">
+  <form method="post" enctype="multipart/form-data" class="box has-advanced-upload">
+     {% csrf_token %}
     <div class="box-input">
       <svg x="0px" y="0px" viewBox="0 0 64 62" style="enable-background:new 0 0 64 62;" xml:space="preserve">
 <style type="text/css">
@@ -25,10 +26,15 @@
 	<path class="st0" d="M18.8,37.9c-1.1-0.5-2.4-0.8-3.8-0.8c-4.6,0-8.5,3.5-8.9,8"/>
 </g>
 </svg>
+      </form>
+      <form class="" action="index.html" method="post">
+
+      {% csrf_token %}
       <input type="file" name="files[]" id="file" class="box-file" data-multiple-caption="{count} files selected" multiple="">
       <input type="hidden" id="csrf_token" value='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
       <label for="file"><strong>Choose a file</strong><span class="box-dragndrop"> or drag it here</span>.</label>
       <button type="submit" class="button">Upload</button>
+      </form>
     </div>
 
     <div class="box-uploading">Uploading…</div>
