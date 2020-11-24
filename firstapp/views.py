@@ -12,7 +12,7 @@ def upload(request):
     if request.method == 'POST':
         #if 'document' in request.FILES:
         context = {}
-        fulltext = request.FILES['document']
+        fulltext = request.FILES['document'].chunks()
         wordlist = fulltext.split()
         worddict = {}
         for word in wordlist:
