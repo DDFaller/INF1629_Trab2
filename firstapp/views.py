@@ -15,7 +15,7 @@ def upload(request):
     return render(request,'upload.html')
 
 def get(request):
-  context = RequestContext(request)
+    context = RequestContext(request)
     context_dict = {}
     # Key statement needs to be added
     context_dict.update(csrf(request))
