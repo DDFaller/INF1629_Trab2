@@ -11,8 +11,9 @@ def index(request):
 def upload(request):
     if request.method == 'POST':
         uploaded_file = request.FILES['document']
-        return render(request, 'home.html')
+        return render(request, 'uploadedView.html')
     return render(request,'upload.html')
+
 
 #def get(request):
 #    context = RequestContext(request)
