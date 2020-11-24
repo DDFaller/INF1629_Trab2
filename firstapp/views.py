@@ -14,12 +14,12 @@ def upload(request):
         return render(request, 'base.html')
     return render(request,'upload.html')
 
-    def get(request):
-      context = RequestContext(request)
-        context_dict = {}
-        # Key statement needs to be added
-        context_dict.update(csrf(request))
-        return render_to_response("upload.html", context_dict, context)
+def get(request):
+  context = RequestContext(request)
+    context_dict = {}
+    # Key statement needs to be added
+    context_dict.update(csrf(request))
+    return render_to_response("upload.html", context_dict, context)
 
 def formSubmission(request):
     form = forms.FileFieldForm()
