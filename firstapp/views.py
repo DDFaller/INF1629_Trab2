@@ -5,7 +5,6 @@ from django.views.generic import TemplateView
 import sys, os, string
 from . import forms
 from . import functions
-from . import term_frequency_calculator
 
 def index(request):
 
