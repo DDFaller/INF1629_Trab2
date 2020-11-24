@@ -9,6 +9,9 @@ def index(request):
     return render(request,"base.html")
 
 def upload(request):
+    if request.method == 'POST':
+        uploaded_file = request.FILES['document']
+        return render(request, 'base.html')
     return render(request,'upload.html')
 
 
