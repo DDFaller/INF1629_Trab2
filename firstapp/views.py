@@ -68,4 +68,4 @@ class term_frequency_calculator():
     #correspondem as top 25 palavras com maior frequência.
     #Duas palavras com a mesma frequência irão aparecer de acordo com sua ocorrência no arquivo.
     def show_top25(self):
-        return self.word_freqs
+        return self.word_freqs.keys()
