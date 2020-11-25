@@ -28,7 +28,7 @@ body {
   width: 100%;
   color: white;
   font-family: 'ubuntu';
-  overflow: hidden;
+  display: inline-block;
 }
 
 #page-title .container {
