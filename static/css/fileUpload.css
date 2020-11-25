@@ -1,5 +1,8 @@
 body {
-  background: #0CE9AF;
+  background: : #74ebd5;
+  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+
   display: flex;
   flex-direction: column;
   font-family: Lato;
@@ -10,6 +13,7 @@ body {
 
 .container {
   margin-top: 5%;
+  margin-bottom: 5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .75);
   width: auto;
 }

@@ -8,8 +8,7 @@ from . import forms
 from . import functions
 
 def index(request):
-
-    return render(request,"base.html")
+    return render(request,"index.html")
 
 def upload(request):
     if request.method == 'POST':
