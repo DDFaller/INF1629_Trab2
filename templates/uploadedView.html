@@ -14,11 +14,10 @@
           </tr>
         </thead>
         <tbody>
-          {% count = 1 %}
           {% for k,v in worddict.items %}
             <tr>
               <th scope="row" class="col-3">
-                {{count}}
+                {{forloop.counter}}
               </th>
               <td class="col-3" >
                 {{k}}
@@ -27,7 +26,6 @@
                 {{v}}
               </td>
             </tr>
-            {% count += 1%}
           {% endfor %}
         </tbody>
       </table>
