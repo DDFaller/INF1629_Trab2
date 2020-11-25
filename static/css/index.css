@@ -3,7 +3,7 @@ html, body {
   padding: 0;
 }
 
-.container{
+#container{
   justify-content: center;
   text-align: center;
   background-color: rgb(0,0,0);
