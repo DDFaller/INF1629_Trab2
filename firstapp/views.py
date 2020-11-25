@@ -24,7 +24,6 @@ def upload(request):
         termFrequency = term_frequency_calculator(stopwordsFile.name,uploadedFile.name)
         termFrequency.generate_frequency_file()
         frequenciesList = termFrequency.show_top25()
-        BuildString(frequenciesList)
         context['worddict'] = frequenciesList
         return render(request, 'uploadedView.html',context)
     return render(request,'upload.html')
