@@ -2,20 +2,20 @@
 {% block content %}
 <div id="uploaded">
     <span class="error">File uploaded</span>
-    <table>
+    <table class ="table">
       <thead>
         <tr>
-          <th>Palavra</th>
-          <<th>Ocorrências</th>
+          <th scope="col">Palavra</th>
+          <th scope="col">Ocorrências</th>
         </tr>
       </thead>
       <tbody>
         {% for k,v in worddict.items %}
           <tr>
-            <th>
+            <th scope="row">
               {{k}}
             </th>
-            <th>
+            <th scope="row">
               {{v}}
             </th>
           </tr>
