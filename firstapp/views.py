@@ -68,12 +68,4 @@ class term_frequency_calculator():
     #correspondem as top 25 palavras com maior frequência.
     #Duas palavras com a mesma frequência irão aparecer de acordo com sua ocorrência no arquivo.
     def show_top25(self):
-        top_frequencies = {}
-        sort_orders = sorted(self.word_freqs.items(), key=lambda x: x[1], reverse=True)
-
-        count = 0
-        for k,v in sort_orders.items():
-            top_frequencies[k] = v
-            count += 1
-
-        return top_frequencies
+        return self.word_freqs
