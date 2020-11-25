@@ -70,4 +70,12 @@ class term_frequency_calculator():
     #Duas palavras com a mesma frequência irão aparecer de acordo com sua ocorrência no arquivo.
     def show_top25(self):
         top_frequencies = {k: v for k, v in sorted(self.word_freqs.items(), key=lambda item: item[1])}
+
+        top_frequencies_values = list(top_frequencies.values())[::-1]
+        top_frequencies_keys = list(top_frequencies.keys())[::-1]
+
+        new_top_frequencies = {}
+        for i in range(0,25):
+            new_top_frequencies[top_frequencies_keys[i]] = top_frequencies_values[i]
+
         return top_frequencies
