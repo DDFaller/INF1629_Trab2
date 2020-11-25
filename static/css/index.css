@@ -3,70 +3,7 @@ html, body {
   padding: 0;
 }
 
-.top-bar{
-  width: 100%;
-  background-color: white;
-  margin-bottom: 0;
-}
-
-.bottom-bar{
-  width: 100%;
-  background-color: white;
-  margin-bottom: 0;
-}
-/* Text Centering Shortcut */
-.horizontal-center {
-  text-align: center;
-}
-.table {
-  display: table;
-}
-.table-row {
-  display: table-row;
-}
-.vertical-center {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-/* Navbar */
-#navbar {
-  margin-bottom: 0;
-  font-family: 'ubuntu';
-}
-
-#page-title {
-  position: relative;
-  width: 100%;
-  font-family: 'ubuntu';
-  overflow: hidden;
-  background-color: rgb(0,0,0);
-  text-align: center;
-}
-
-#title-image {
-  filter:alpha(opacity=80);
-  opacity: 0.8;
-  -moz-opacity:0.8;
-}
-#page-title .container {
-  min-height: 350px;
-}
-
-#page-title .article-title, #page-title .article-subtitle {
-  text-shadow: 0px 0px 40px black;
-}
-
-/* Article */
-article {
-  font-family: 'roboto';
-  font-size: 1.1em;
-  color: white;
-  text-align: center;
-}
-article h2, article h3 {
-  font-family: 'ubuntu'
-  color: white;
+.container{
+  justify-content: center;
   text-align: center;
 }
