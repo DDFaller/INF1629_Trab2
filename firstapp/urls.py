@@ -6,6 +6,7 @@ from . import views
 urlpatterns =[
   path("",views.index, name = "index"),
   path("upload/",views.upload, name="upload"),
+  path("about/",views.about, name="about"),
   #app/upload/uploadedView
 ]
 if settings.DEBUG:

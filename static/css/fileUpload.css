@@ -11,6 +11,12 @@ body {
   text-shadow: 0 0px 2px rgba(245, 245, 245, .25);
 }
 
+.top-bar{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+}
+
 .container {
   margin-top: 5%;
   margin-bottom: 5%;

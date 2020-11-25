@@ -1,0 +1,29 @@
+.top-bar{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+}
+
+
+body {
+  background: : #74ebd5;
+  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+
+}
+
+#description{
+  background-color: rgb(200,200,200);
+  justify-content: center;
+  position: relative;
+  float: right;
+
+
+}
+
+#title-image{
+    float: left;
+    margin-left: 15%;
+    margin-right: 10%;
+
+}

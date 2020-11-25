@@ -10,6 +10,10 @@ from . import functions
 def index(request):
     return render(request,"index.html")
 
+def about(request):
+    return render(request,"about.html")
+
+
 def upload(request):
     if request.method == 'POST':
         #if 'document' in request.FILES:
