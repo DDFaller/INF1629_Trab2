@@ -7,8 +7,6 @@
 */
 .table-fixed tbody {
     height: 300px;
-    overflow-y: auto;
-    width: 100%;
 }
 
 .table-fixed thead,
@@ -32,6 +30,7 @@
 }
 
 .table-container{
+  background-color:transparent;
   margin-left: auto;
   margin-right: auto;
   width: 8em
@@ -43,7 +42,6 @@
 
 
 body{
-
   background: : #74ebd5;
   background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
   background: linear-gradient(to right, #74ebd5, #ACB6E5);
