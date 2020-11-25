@@ -78,4 +78,4 @@ class term_frequency_calculator():
         for i in range(0,25):
             new_top_frequencies[top_frequencies_keys[i]] = top_frequencies_values[i]
 
-        return top_frequencies
+        return new_top_frequencies
