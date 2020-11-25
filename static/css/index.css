@@ -3,13 +3,6 @@ html, body {
   padding: 0 !important;
 }
 
-body{
-  background: : #74ebd5;
-  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
-  background: linear-gradient(to right, #74ebd5, #ACB6E5);
-  min-height: 100vh;
-}
-
 .top-bar{
   width: 100%;
   background-color: white;
