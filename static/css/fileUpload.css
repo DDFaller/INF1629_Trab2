@@ -162,3 +162,7 @@ input {
 strong {
   color: #fff;
 }
+
+a{
+  text-decoration: underline;
+}

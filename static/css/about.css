@@ -47,3 +47,7 @@ body {
   margin-right: 5%;
   width: 20%;
 }
+
+a{
+  text-decoration: underline;
+}
