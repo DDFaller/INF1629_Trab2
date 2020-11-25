@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView
+from django.core.files.storage import FileSystemStorage
 #!/usr/bin/env python
 import sys, os, string
 from . import forms
@@ -13,10 +14,14 @@ def index(request):
 def upload(request):
     if request.method == 'POST':
         #if 'document' in request.FILES:
+        fs = FileSystemStorage()
+
         context = {}
         uploadedFile = request.FILES['document']
         stopwordsFile = request.FILES['stopwords']
-        termFrequency = term_frequency_calculator(uploadedFile,stopwordsFile)
+        fs.save( uploadedFile.name, uploadedFile )
+        fs.save( stopwordsFile.name, stopwordsFile )
+        termFrequency = term_frequency_calculator(uploadedFile.name, stopwordsFile.name)
         termFrequency.generate_frequency_file()
         frequenciesList = termFrequency.show_top25()
         context['worddict'] = frequenciesList
@@ -29,11 +34,9 @@ def upload(request):
 
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
-        self.stopwords = stopwords_file.open('r')
-        self.stopwords = self.stopwords.decode("utf-8") #'../stop_words.txt'
+        self.stopwords = open( stopwords_file, 'r')
         self.word_freqs = {}
-        self.data_file = content_file.open('r')
-        self.data_file = self.data_file.decode("utf-8")
+        self.data_file = open( content_file, 'r')
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
     #num segundo arquivo.
     #PRE: data_file possui conteudo a ser contabilizado(Verificação: existe uma assertiva garantindo isto)
@@ -45,9 +48,9 @@ class term_frequency_calculator():
         line = []
         word = ""
 
-        file = self.data_file.read().decode("utf-8").split("\n")
+        file = self.data_file.read().split("\n")
         for line in file:
-
+            print(line)
             line_split = line.split(" ")
             for wor in line_split:
                 if len(word) >= 2 and word not in self.stopwords:
