@@ -10,5 +10,7 @@ html, body {
   color: white;
 }
 bottom-bar{
-  
+  width: 50%;
+  left: 25%;
+  text-decoration: underline;
 }
