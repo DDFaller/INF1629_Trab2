@@ -3,26 +3,31 @@
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-
-<div id="uploaded">
-    <table class ="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Palavra</th>
-          <th scope="col">Ocorrências</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for k,v in worddict.items %}
+  <div class="table-responsive">
+      <table class ="table table-fixed">
+        <thead>
           <tr>
-            <th scope="row">
-              {{k}}
-            </th>
-            <th scope="row">
-              {{v}}
-            </th>
+            <th scope="col" class="col-3">#</th>
+            <th scope="col" class="col-3">Palavra</th>
+            <th scope="col" class="col-3">Ocorrências</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-</div>
+        </thead>
+        <tbody>
+          {% count = 1 %}
+          {% for k,v in worddict.items %}
+            <tr>
+              <th scope="row" class="col-3">
+                {{count}}
+              </th>
+              <td class="col-3" >
+                {{k}}
+              </td>
+              <td class="col-3">
+                {{v}}
+              </td>
+            </tr>
+            {% count += 1%}
+          {% endfor %}
+        </tbody>
+      </table>
+  </div>
