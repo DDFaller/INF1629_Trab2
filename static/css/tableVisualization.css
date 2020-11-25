@@ -29,6 +29,7 @@
 
 .table-fixed tbody{
     justify-content: center;
+    clear: both;
 }
 
 .table-container{
@@ -38,7 +39,8 @@
   left: 50%;                         /* 3 */
   transform: translate(-50%,0);
 
-  background-color:transparent;
+  clear: both;
+  background-color: rgb(255,255,255);
 
   align-items: center;
   justify-content: center;
