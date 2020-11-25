@@ -30,12 +30,15 @@
 }
 
 .table-container{
+  display: block;
+
+  position: absolute;               /* 2 */
+  left: 50%;                         /* 3 */
+  transform: translate(-50%,0);
+
   background-color:transparent;
-  margin-left: auto;
-  margin-right: auto;
-  width: 8em;
+
   align-items: center;
-  display: flex;
   padding: 40px;
 
 }
