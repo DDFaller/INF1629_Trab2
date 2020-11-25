@@ -36,7 +36,7 @@ class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
         self.stopwords = open( 'media/' + stopwords_file, 'r')
         self.word_freqs = {}
-        self.data_file = open( 'media/' + content_file, 'r')
+        self.content_file = 'media/' + content_file
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
     #num segundo arquivo.
     #PRE: data_file possui conteudo a ser contabilizado(Verificação: existe uma assertiva garantindo isto)
@@ -47,10 +47,10 @@ class term_frequency_calculator():
     def generate_frequency_file(self):
         line = []
         word = ""
-
+        data_file = open(self.content_file, 'r')
         lines = self.data_file.read().split("\n")
         for line in lines:
-            print(line)
+            print("Show line -> " + line)
             line_split = line.split(" ")
             for word in line_split:
                 if len(word) >= 2 and word:
@@ -68,4 +68,4 @@ class term_frequency_calculator():
     #correspondem as top 25 palavras com maior frequência.
     #Duas palavras com a mesma frequência irão aparecer de acordo com sua ocorrência no arquivo.
     def show_top25(self):
-        return self.word_freqs.keys()
+        return str(self.word_freqs)
