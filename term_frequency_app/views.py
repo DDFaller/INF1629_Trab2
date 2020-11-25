@@ -40,6 +40,7 @@ class term_frequency_calculator():
         self.stopwords = open( 'media/' + stopwords_file, 'r')
         self.word_freqs = {}
         self.content_file = 'media/' + content_file
+
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
     #num segundo arquivo.
     #PRE: data_file possui conteudo a ser contabilizado(Verificação: existe uma assertiva garantindo isto)
