@@ -33,10 +33,17 @@
 }
 
 .table-container{
-  display: block;
-  width: 400px;
-  max-width: 600px;
-  position: fixed;
+  align-items: center;
+  display: flex;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  background: #74ebd5;
+  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  min-height: 100vh;
 
 }
 
@@ -47,11 +54,3 @@
 * ==========================================
 *
 */
-
-body {
-    background: #74ebd5;
-    background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    min-height: 100vh;
-
-}
