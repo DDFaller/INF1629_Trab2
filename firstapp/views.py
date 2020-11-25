@@ -52,7 +52,7 @@ class term_frequency_calculator():
         for line in lines:
             print(line)
             line_split = line.split(" ")
-            for wor in line_split:
+            for word in line_split:
                 if len(word) >= 2 and word:
                     # Checa se palavra já foi guardada
                     if word in self.word_freqs.keys():
