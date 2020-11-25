@@ -34,18 +34,18 @@
 
 .table-container{
   display: block;
-  margin-top: 5%;
+  margin-top: 2%;
 
   position: absolute;               /* 2 */
   left: 50%;                         /* 3 */
   transform: translate(-50%,0);
 
   clear: both;
-  background-color: rgb(255,255,255);
+  background-color: rgb(240,240,240);
 
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 20px;
 
 }
 
