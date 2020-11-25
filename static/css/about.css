@@ -13,9 +13,8 @@ body {
 
 #description{
   background-color: rgb(200,200,200);
-  justify-content: center;
-  position: relative;
   float: right;
+  width: 65%;
 }
 
 #title-image{
@@ -35,4 +34,11 @@ body {
 #page-title .container {
   min-height: 350px;
   display: table;
+}
+
+.bg{
+  float: left;
+  text-align: right;
+  margin-right: 5%;
+  width: 20%;
 }
