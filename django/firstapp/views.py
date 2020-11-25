@@ -34,14 +34,6 @@ def upload(request):
 
     # Utility for handling the intermediate 'secondary memory'
 
-def BuildString(dictFrequencies):
-    output = ""
-    for k,v in dictFrequencies.items():
-        output += str(k)
-        output += " : "
-        output += str(v)
-        output += ",\n"
-
 
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
