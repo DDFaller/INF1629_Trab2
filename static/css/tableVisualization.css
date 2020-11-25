@@ -35,16 +35,18 @@
   align-items: center;
   display: flex;
   padding: 40px;
-  margin-left: 45%;
-
-
-  background-color: : #74ebd5;
-  background-color: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
-  background-color: linear-gradient(to right, #74ebd5, #ACB6E5);
-  min-height: 100vh;
+  margin-left: 25%;
 
 }
 
+
+body{
+
+  background: : #74ebd5;
+  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+}
 /*
 *
 * ==========================================
