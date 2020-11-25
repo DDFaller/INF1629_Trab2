@@ -3,6 +3,18 @@ html, body {
   padding: 0 !important;
 }
 
+body{
+  background: : #74ebd5;
+  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+}
+
+.top-bar{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+}
 /* Text Centering Shortcut */
 .horizontal-center {
   text-align: center;
@@ -92,6 +104,7 @@ article h2, article h3 {
 .pager {
   font-family: 'ubuntu';
 }
+
 
 /* Image List */
 .image-list {
