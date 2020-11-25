@@ -15,7 +15,9 @@ body {
 
 .container{
   display: inline-block;
-  text-align: center;
+  justify-content:center;
+  padding: 50px;
+  width: 80%;
 }
 
 .description{
@@ -29,7 +31,8 @@ body {
 #title-image{
     float: right;
     position: relative;
-    margin-right: 10%;
+    margin-right: 15%;
+    margin-top: 15%;
 }
 
 #page-title {
@@ -57,6 +60,6 @@ body {
   width: 20%;
 }
 
-a{
+a {
   text-decoration: underline;
 }
