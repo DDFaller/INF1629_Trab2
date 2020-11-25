@@ -32,11 +32,12 @@
 }
 
 .table-container{
-  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
   align-items: center;
   display: flex;
   padding: 40px;
-  margin-left: 25%;
 
 }
 
