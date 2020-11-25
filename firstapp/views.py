@@ -48,7 +48,8 @@ class term_frequency_calculator():
         line = []
         word = ""
         data_file = open(self.content_file, 'r')
-        lines = self.data_file.read().split("\n")
+        lines = data_file.read().split("\n")
+
         for line in lines:
             print("Show line -> " + line)
             line_split = line.split(" ")
