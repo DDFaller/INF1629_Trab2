@@ -4,29 +4,22 @@
 <link rel="stylesheet" href="{% static 'css/tableVisualization.css' %}">
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-  <div class="table-responsive">
-      <table class ="table table-fixed">
-        <thead>
-          <tr>
-            <th scope="col" class="col-3">#</th>
-            <th scope="col" class="col-3">Palavra</th>
-            <th scope="col" class="col-3">Ocorrências</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for k,v in worddict.items %}
-            <tr>
-              <th scope="row" class="col-3">
-                {{forloop.counter}}
-              </th>
-              <td class="col-3" >
-                {{k}}
-              </td>
-              <td class="col-3">
-                {{v}}
-              </td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-  </div>
+
+<table class ="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="col-3">#</th>
+      <th scope="col" class="col-3">Palavra</th>
+      <th scope="col" class="col-3">Ocorrências</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for k,v in worddict.items %}
+      <tr>
+        <th scope="row" class="col-3">{{forloop.counter}}</th>
+        <td class="col-3">{{k}}</td>
+        <td class="col-3">{{v}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
