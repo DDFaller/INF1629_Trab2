@@ -11,10 +11,8 @@ body {
   background: linear-gradient(to right, #74ebd5, #ACB6E5);
 }
 
-#description{
-  background-color: rgb(200,200,200);
-  float: right;
-  width: 65%;
+.container{
+  display: inline-block;
 }
 
 #title-image{
