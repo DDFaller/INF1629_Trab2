@@ -8,10 +8,9 @@ body {
   text-shadow: 0 0px 2px rgba(245, 245, 245, .25);
 }
 
-#container {
+.container {
   margin-top: 5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .75);
-  margin: auto;
   width: auto;
 }
 
