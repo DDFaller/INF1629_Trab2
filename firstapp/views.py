@@ -34,9 +34,9 @@ def upload(request):
 
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
-        self.stopwords = open( stopwords_file, 'r')
+        self.stopwords = open( 'media/' + stopwords_file, 'r')
         self.word_freqs = {}
-        self.data_file = open( content_file, 'r')
+        self.data_file = open( 'media/' + content_file, 'r')
     #Recebe um arquivo e iterando suas linhas registra as frequências das palavras
     #num segundo arquivo.
     #PRE: data_file possui conteudo a ser contabilizado(Verificação: existe uma assertiva garantindo isto)
