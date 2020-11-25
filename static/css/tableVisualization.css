@@ -34,7 +34,8 @@
 
 .table-container{
   display: block;
-
+  margin-top: 15%;
+  
   position: absolute;               /* 2 */
   left: 50%;                         /* 3 */
   transform: translate(-50%,0);
