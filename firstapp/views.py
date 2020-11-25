@@ -48,12 +48,12 @@ class term_frequency_calculator():
         line = []
         word = ""
 
-        file = self.data_file.read().split("\n")
-        for line in file:
+        lines = self.data_file.read().split("\n")
+        for line in lines:
             print(line)
             line_split = line.split(" ")
             for wor in line_split:
-                if len(word) >= 2 and word not in self.stopwords:
+                if len(word) >= 2 and word:
                     # Checa se palavra já foi guardada
                     if word in self.word_freqs.keys():
                         self.word_freqs[word] += 1
