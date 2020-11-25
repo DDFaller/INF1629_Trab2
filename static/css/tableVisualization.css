@@ -21,12 +21,14 @@
 .table-fixed tbody th,
 .table-fixed thead > tr > th {
     position: relative;
+    content: '';
+    clear: both;
+    display: block;
 
-    &::after {
-        content: '';
-        clear: both;
-        display: block;
-    }
+}
+
+.table-fixed tbody{
+    justify-content: center;
 }
 
 .table-container{
@@ -39,6 +41,7 @@
   background-color:transparent;
 
   align-items: center;
+  justify-content: center;
   padding: 40px;
 
 }
