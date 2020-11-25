@@ -21,7 +21,7 @@ def upload(request):
         stopwordsFile = request.FILES['stopwords']
         fs.save( uploadedFile.name, uploadedFile )
         fs.save( stopwordsFile.name, stopwordsFile )
-        termFrequency = term_frequency_calculator(uploadedFile.name, stopwordsFile.name)
+        termFrequency = term_frequency_calculator(stopwordsFile.name,uploadedFile.name)
         termFrequency.generate_frequency_file()
         frequenciesList = termFrequency.show_top25()
         context['worddict'] = frequenciesList
