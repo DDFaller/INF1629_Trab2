@@ -9,7 +9,6 @@ body {
   background: : #74ebd5;
   background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
   background: linear-gradient(to right, #74ebd5, #ACB6E5);
-
 }
 
 #description{
@@ -17,13 +16,23 @@ body {
   justify-content: center;
   position: relative;
   float: right;
-
-
 }
 
 #title-image{
     float: left;
     margin-left: 15%;
     margin-right: 10%;
+}
 
+#page-title {
+  position: relative;
+  width: 100%;
+  color: white;
+  font-family: 'ubuntu';
+  overflow: hidden;
+}
+
+#page-title .container {
+  min-height: 350px;
+  display: table;
 }
