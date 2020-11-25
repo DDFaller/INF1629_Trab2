@@ -22,16 +22,17 @@
 .table-fixed tbody td,
 .table-fixed tbody th,
 .table-fixed thead > tr > th {
-    float: left;
     position: relative;
 
     &::after {
         content: '';
         clear: both;
+        display: block;
     }
 }
 
 .table-container{
+  width: 450px;
   align-items: center;
   display: flex;
   padding: 40px;
