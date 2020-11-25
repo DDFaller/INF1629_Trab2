@@ -34,8 +34,8 @@
 
 .table-container{
   display: block;
-  margin-top: 15%;
-  
+  margin-top: 5%;
+
   position: absolute;               /* 2 */
   left: 50%;                         /* 3 */
   transform: translate(-50%,0);
@@ -45,7 +45,7 @@
 
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
 
 }
 
