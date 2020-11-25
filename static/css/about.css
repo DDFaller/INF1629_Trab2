@@ -25,10 +25,16 @@ body {
 
 #page-title {
   position: relative;
-  width: 100%;
   color: white;
   font-family: 'ubuntu';
   display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 100px;
+  margin-top: -50px;/*half of height*/
+  margin-left: -100px;/*half of width*/
 }
 
 #page-title .container {
