@@ -107,31 +107,3 @@ article h2, article h3 {
 .pager {
   font-family: 'ubuntu';
 }
-
-
-/* Image List */
-.image-list {
-  list-style: none;
-  padding-left: 0;
-}
-.image-list li {
-  padding-bottom: 5px;
-  display: table-row;
-}
-.image-list img {
-  width: 40px;
-  height: 40px;
-}
-.image-list .vertical-center {
-  padding-bottom: 6px;
-}
-
-/* Tag List */
-.tag-cont .btn {
-  margin-right: 4px;
-  margin-bottom: 7px;
-  color: #333;
-}
-.tag-cont .btn:hover {
-  background-color: #eee;
-}
