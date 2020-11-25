@@ -56,10 +56,3 @@ a{
   min-height: 350px;
   display: table;
 }
-
-.bg{
-  float: left;
-  text-align: right;
-  margin-right: 5%;
-  width: 20%;
-}
