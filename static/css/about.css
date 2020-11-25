@@ -13,16 +13,20 @@ body {
   padding: 0;
 }
 
+a{
+  text-decoration: underline;
+}
+
 .container{
   display: inline-block;
   justify-content:center;
   padding: 50px;
-  width: 80%;
+  width: 100%;
 }
 
 .description{
   float:left;
-  margin-left: 15%;
+  margin-left: 10%;
   margin-top: 15%;
   position: relative;
 
@@ -31,7 +35,7 @@ body {
 #title-image{
     float: right;
     position: relative;
-    margin-right: 15%;
+    margin-right: 10%;
     margin-top: 15%;
 }
 
@@ -58,8 +62,4 @@ body {
   text-align: right;
   margin-right: 5%;
   width: 20%;
-}
-
-a {
-  text-decoration: underline;
 }
