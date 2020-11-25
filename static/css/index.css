@@ -1,6 +1,6 @@
 html, body {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
 .top-bar{
@@ -36,30 +36,14 @@ html, body {
   font-family: 'ubuntu';
 }
 
-/* Page title */
-.bg {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-}
-.bg img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
-}
 #page-title {
   position: relative;
   width: 100%;
   font-family: 'ubuntu';
   overflow: hidden;
+  background-color: rgb(0,0,0);
 }
+
 #title-image {
   filter:alpha(opacity=80);
   opacity: 0.8;
@@ -67,8 +51,8 @@ html, body {
 }
 #page-title .container {
   min-height: 350px;
-  display: table;
 }
+
 #page-title .article-title, #page-title .article-subtitle {
   text-shadow: 0px 0px 40px black;
 }
@@ -77,25 +61,9 @@ html, body {
 article {
   font-family: 'roboto';
   font-size: 1.1em;
+  color: white;
 }
 article h2, article h3 {
   font-family: 'ubuntu'
-}
-.author {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.author-image {
-  margin-right: 10px;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-}
-.author-name {
-  font-size: 1.3em;
-}
-
-/* Pager */
-.pager {
-  font-family: 'ubuntu';
+  color: white;
 }

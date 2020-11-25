@@ -21,7 +21,7 @@ Após uma refatoração do código mencionado acima, a intenção deste projeto 
 <h2>Link do trello</h2>
 <a href = "https://trello.com/b/TZC6WQmV/term-frequency">https://trello.com/b/TZC6WQmV/term-frequency</a><br>
 <h2>Aplicação online usando Heroku</h2>
-<a href = "https://evening-fortress-74493.herokuapp.com/app">Term Frequency</a>
+<a href = "https://fast-wave-07661.herokuapp.com/app">Term Frequency</a>
 <h2>Desenvolvimento local</h2>
 <a href = "https://github.com/DDFaller/INF1629_Trab2/tree/main/local/local">Código do desenvolvimento local</a>
 
