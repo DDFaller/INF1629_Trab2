@@ -2,7 +2,25 @@
 {% block content %}
 <div id="uploaded">
     <span class="error">File uploaded</span>
-
-    {{worddict}}
+    <table>
+      <thead>
+        <tr>
+          <th>Palavra</th>
+          <<th>Ocorrências</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for k,v in worddict %}
+          <tr>
+            <th>
+              {{k}}
+            </th>
+            <th>
+              {{v}}
+            </th>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 </div>
 {% endblock content %}

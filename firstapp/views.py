@@ -24,12 +24,21 @@ def upload(request):
         termFrequency = term_frequency_calculator(stopwordsFile.name,uploadedFile.name)
         termFrequency.generate_frequency_file()
         frequenciesList = termFrequency.show_top25()
+        BuildString(frequenciesList)
         context['worddict'] = frequenciesList
         return render(request, 'uploadedView.html',context)
     return render(request,'upload.html')
 
 
     # Utility for handling the intermediate 'secondary memory'
+
+def BuildString(dictFrequencies):
+    output = ""
+    for k,v in dictFrequencies.items():
+        output += str(k)
+        output += " : "
+        output += str(v)
+        output += ",\n"
 
 
 class term_frequency_calculator():
@@ -51,7 +60,6 @@ class term_frequency_calculator():
         lines = data_file.read().split("\n")
 
         for line in lines:
-            print("Show line -> " + line)
             line_split = line.split(" ")
             for word in line_split:
                 if len(word) >= 2 and word:
@@ -76,6 +84,8 @@ class term_frequency_calculator():
 
         new_top_frequencies = {}
         for i in range(0,25):
+            if i == len(top_frequencies.keys()):
+                break
             new_top_frequencies[top_frequencies_keys[i]] = top_frequencies_values[i]
 
         return new_top_frequencies
