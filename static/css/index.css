@@ -47,7 +47,9 @@ html, body {
   position: relative;
   width: 100%;
   color: white;
-  background-color: #1f4a6f;
+  background-color: #74ebd5;
+  background-color: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background-color: linear-gradient(to right, #74ebd5, #ACB6E5);
   font-family: 'ubuntu';
   overflow: hidden;
 }
@@ -89,29 +91,6 @@ article h2, article h3 {
 /* Pager */
 .pager {
   font-family: 'ubuntu';
-}
-
-/* Footer */
-footer {
-  background-color: #1f4a6f;
-  padding-bottom: 40px;
-  margin-bottom: 0;
-  color: white;
-  font-family: 'roboto';
-}
-footer h2, footer h3 {
-  font-family: 'ubuntu';
-}
-footer a {
-  color: #70a7d7;
-}
-footer a:hover {
-  color: #337ab7;
-}
-
-/* Social Button List */
-.social-cont {
-  margin-top: 20px;
 }
 
 /* Image List */
