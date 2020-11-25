@@ -28,7 +28,6 @@
     &::after {
         content: '';
         clear: both;
-        display: block;
     }
 }
 
@@ -36,13 +35,12 @@
   align-items: center;
   display: flex;
   padding: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 45%;
 
 
-  background: #74ebd5;
-  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
-  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  background-color: : #74ebd5;
+  background-color: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background-color: linear-gradient(to right, #74ebd5, #ACB6E5);
   min-height: 100vh;
 
 }
