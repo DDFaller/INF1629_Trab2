@@ -9,15 +9,26 @@ body {
   background: : #74ebd5;
   background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
   background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  margin: 0;
+  padding: 0;
 }
 
 .container{
   display: inline-block;
+  text-align: center;
+}
+
+.description{
+  float:left;
+  margin-left: 15%;
+  margin-top: 15%;
+  position: relative;
+
 }
 
 #title-image{
     float: right;
-    margin-left: 15%;
+    position: relative;
     margin-right: 10%;
 }
 
