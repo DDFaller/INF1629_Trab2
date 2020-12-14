@@ -6,12 +6,12 @@ html, body {
 .container{
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 45%;
   margin-top: -50px;
   margin-left: -10px;
-  background-color: rgb(255,0,0);
+  padding: 30px;
 }
 
 #redirect{
-  background-color: rgb(0,255,0);
+  
 }
