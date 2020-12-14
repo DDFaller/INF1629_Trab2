@@ -6,11 +6,12 @@ import sys, os, string
 
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
-        self.stopwords_file = stopwords_file.open()#'../stop_words.txt'
-        self.stopwords = self.stopwords_file.read().split(',')
-        print('====================================')
-        print(self.stopwords)
-        self.stopwords_file.close()
+        #self.stopwords_file = stopwords_file.open()#'../stop_words.txt'
+        stopwords = stopwords_file.read().split(',')
+        for i in range(0,len(stopwords)):
+            stopwords[i] = stopwords[i].strip()
+        self.stopwords = stopwords
+
         self.word_freqs = self.touchopen('word_freqs', 'rb+')
         self.data_file = content_file.open()
 
