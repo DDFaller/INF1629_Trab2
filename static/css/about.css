@@ -29,13 +29,13 @@ a{
 
 }
 
-#title-image{
+.title-image{
     display:block;
     position: absolute;
     top:0px;
     right:-20px;
-    width: 10px;
-    height: 10px;
+    width: 50px;
+    height: auto;
 }
 
 #page-title {
