@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/tableVisualization.css' %}">
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<title>INF1629 Grupo 3</title>
+<body>
+  <button id="redirect">Adicione arquivos válidos</button>
+  <script type="text/javascript">
+      document.querySelector('#redirect').
+        addEventListener('click',() => {
+          window.location.href = 'https://fast-wave-07661.herokuapp.com/app/upload/';
+        });
+  </script>
+</body>

@@ -22,6 +22,8 @@ def upload(request):
         context = {}
         uploadedFile = request.FILES['document']
         stopwordsFile = request.FILES['stopwords']
+        if not ('document' in request.FILES) or not ('stopwords' in request.FILES):
+            return render(request,'uploadFail.html')
         fs.save( uploadedFile.name, uploadedFile )
         fs.save( stopwordsFile.name, stopwordsFile )
         termFrequency = term_frequency_calculator(stopwordsFile.name,uploadedFile.name)

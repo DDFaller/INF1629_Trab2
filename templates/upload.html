@@ -39,12 +39,11 @@
 </g>
 </svg>
     <form class="" method="post" enctype="multipart/form-data">
-
       {% csrf_token %}
       <input id="document" type="file" name="document"/>
       <input id="stopwords" type="file" name="stopwords"/>
       <input type="hidden" id="csrf_token" value='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
-      <label for="file"><strong>Choose a file</strong>.</label>
+      <label for="file"><strong>Escolha um arquivo</strong>.</label>
       <button type="submit" class="button">Upload</button>
     </form>
     </div>
