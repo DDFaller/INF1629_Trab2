@@ -4,7 +4,6 @@ from django.views.generic import TemplateView
 from django.core.files.storage import FileSystemStorage
 #!/usr/bin/env python
 import sys, os, string
-from . import forms
 from . import functions
 
 def index(request):
