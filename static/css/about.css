@@ -32,8 +32,10 @@ a{
 #title-image{
     float: right;
     position: relative;
-    margin-right: 10%;
+    margin-right: 5%;
     margin-top: 15%;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 #page-title {
