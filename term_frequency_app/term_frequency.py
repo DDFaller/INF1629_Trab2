@@ -7,7 +7,7 @@ import sys, os, string
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
         #self.stopwords_file = stopwords_file.open()#'../stop_words.txt'
-        stopwords = stopwords_file.read().split(',')
+        stopwords = stopwords_file.open().read().split(',')
         for i in range(0,len(stopwords)):
             stopwords[i] = stopwords[i].strip()
         self.stopwords = stopwords
@@ -61,7 +61,7 @@ class term_frequency_calculator():
                     if not c.isalnum():
                         is_found = False
                         word = line[0][word_start:word_index].lower()
-                        print('word:' + word + '|')
+                        word = word.strip()
                         if len(word) >= 2 and not (word in self.stopwords):
                             # Checa se palavra já foi guardada
                             while True:
@@ -119,4 +119,4 @@ class term_frequency_calculator():
             #if len(tf) == 2:
             #    print(tf[0], '-', tf[1])
         self.word_freqs.close()
-        return self.stopwords
+        return top_frequencies
