@@ -6,5 +6,6 @@ html, body {
 .container{
   justify-content: center;
   text-align: center;
-  margin-left: 400px;
+  top:20%;
+  margin-left: 50%;
 }
