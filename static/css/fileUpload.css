@@ -18,6 +18,7 @@ body {
   margin-bottom: 5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .75);
   width: auto;
+  background-color: rgb(200,200,200);
 }
 
 .box-input {
@@ -83,7 +84,7 @@ input[type="file" i]::-webkit-file-upload-button {
 }
 
 button {
-  background: #0CE9AF;
+  background: rgb(63, 155, 237);
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
   color: #fff;
