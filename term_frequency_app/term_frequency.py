@@ -58,7 +58,7 @@ class term_frequency_calculator():
                     if not c.isalnum():
                         is_found = False
                         word = line[0][word_start:word_index].lower()
-                        if len(word) >= 2 and word not in self.stopwords:
+                        if len(word) >= 2 and not (word in self.stopwords):
                             # Checa se palavra já foi guardada
                             while True:
                                 stored_word = str(self.word_freqs.readline().strip(), 'utf-8')
