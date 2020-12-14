@@ -118,4 +118,4 @@ class term_frequency_calculator():
             #if len(tf) == 2:
             #    print(tf[0], '-', tf[1])
         self.word_freqs.close()
-        return top_frequencies
+        return self.stopwords
