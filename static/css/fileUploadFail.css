@@ -8,10 +8,11 @@ html, body {
   top: 50%;
   left: 45%;
   margin-top: -50px;
-  margin-left: -10px;
+  margin-left: -30px;
 
 }
 
 #redirect{
   padding: 30px;
+  background-color: rgb(33, 125, 207);
 }
