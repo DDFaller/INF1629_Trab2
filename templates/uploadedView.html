@@ -36,6 +36,14 @@
             <td class="col-3">{{v}}</td>
           </tr>
         {% endfor %}
+
+        {% for k,v in stopwords.items %}
+          <tr>
+            <th scope="row" class="col-3">{{forloop.counter}}</th>
+            <td class="col-3">{{k}}</td>
+            <td class="col-3">{{v}}</td>
+          </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
