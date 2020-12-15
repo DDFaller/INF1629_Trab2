@@ -29,7 +29,7 @@ def upload(request):
         termFrequency.generate_frequency_file()
         frequenciesList = termFrequency.show_top25()
         context['worddict'] = frequenciesList
-        context['stopwords']
+        context['stopwords'] = termFrequency.stopwords
         return render(request, 'uploadedView.html',context)
     return render(request,'upload.html')
 
