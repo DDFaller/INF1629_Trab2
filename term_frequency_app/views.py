@@ -39,7 +39,11 @@ def upload(request):
 
 class term_frequency_calculator():
     def __init__(self,stopwords_file,content_file):
-        self.stopwords = open( 'media/' + stopwords_file, 'r')
+        self.stopwords_file = open( 'media/' + stopwords_file, 'r')
+        stopwords= self.stopwords_file.read().split(',')
+        for i in range(0,len(stopwords)):
+            stopwords[i] = stopwords[i].strip()
+        self.stopwords = stopwords
         self.word_freqs = {}
         self.content_file = 'media/' + content_file
 
@@ -59,7 +63,7 @@ class term_frequency_calculator():
         for line in lines:
             line_split = line.split(" ")
             for word in line_split:
-                if len(word) >= 2 and word:
+                if len(word) >= 2 and not (word in self.stopwords) :
                     # Checa se palavra já foi guardada
                     if word in self.word_freqs.keys():
                         self.word_freqs[word] += 1
