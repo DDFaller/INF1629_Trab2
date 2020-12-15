@@ -22,6 +22,8 @@ Após uma refatoração do código mencionado acima, a intenção deste projeto 
 <a href = "https://trello.com/b/TZC6WQmV/term-frequency">https://trello.com/b/TZC6WQmV/term-frequency</a><br>
 <h2>Aplicação online usando Heroku</h2>
 <a href = "https://fast-wave-07661.herokuapp.com/app">Term Frequency</a>
+<h3>Usabilidade</h3>
+Devido a forma que o heroku fornece o serviço de host durante o primeiro acesso a url, será necessário esperar um tempo extra para a alocação do host.
 <h2>Desenvolvimento local</h2>
 <a href = "https://github.com/DDFaller/INF1629_Trab2/tree/main/local/local">Código do desenvolvimento local</a>
 
